@@ -3,6 +3,7 @@ addons:
     packages:
       - texlive-xetex
       - texlive-latex-extra
+      - lmodern
 
 script:
   - xelatex latex_template.tex
