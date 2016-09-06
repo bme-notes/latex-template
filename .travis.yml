@@ -2,7 +2,7 @@ addons:
   apt:
     packages:
       - texlive-xetex
-      - lmodern
+      - texlive-latex-extra
 
 script:
   - xelatex latex_template.tex
