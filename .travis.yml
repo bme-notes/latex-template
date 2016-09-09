@@ -14,7 +14,7 @@ script:
   - tlmgr init-usertree
   - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
   - tlmgr update --all
-  - tlmgr install etoolbox tcolorbox framed polyglossia hyperref tikz
+  - tlmgr install etoolbox tcolorbox framed polyglossia hyperref pgf
   - xelatex latex_template.tex
   - xelatex latex_template.tex
 
