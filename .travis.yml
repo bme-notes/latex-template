@@ -9,6 +9,7 @@ addons:
       - lmodern
       - texlive-latex-recommended
       - xzdec
+      - texlive-fonts-recommended
 
 script:
   - tlmgr init-usertree
