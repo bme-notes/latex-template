@@ -8,6 +8,7 @@ addons:
       - texlive-latex-extra
       - lmodern
       - texlive-latex-recommended
+      - xzdec
 
 script:
   - tlmgr init-usertree
