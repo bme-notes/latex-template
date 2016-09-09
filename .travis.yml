@@ -10,7 +10,7 @@ addons:
       - texlive-latex-recommended
 
 script:
-  - tlmgr init
+  - tlmgr init-usertree
   - tlmgr install etoolbox tcolorbox framed polyglossia hyperref
   - xelatex latex_template.tex
   - xelatex latex_template.tex
