@@ -1,30 +1,25 @@
 sudo: required
 dist: trusty
-
 addons:
   apt:
     packages:
-      - texlive-xetex
-      - texlive-latex-extra
-      - lmodern
-      - texlive-latex-recommended
-      - xzdec
-      - texlive-fonts-recommended
-
+    - texlive-xetex
+    - texlive-latex-extra
+    - lmodern
+    - texlive-latex-recommended
+    - xzdec
+    - texlive-fonts-recommended
 script:
-  - tlmgr init-usertree
-  - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
-  - tlmgr update --all
-  - tlmgr install etoolbox tcolorbox framed polyglossia hyperref pgf xcolor
-  - xelatex latex_template.tex
-  - xelatex latex_template.tex
-
+- tlmgr init-usertree
+- tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
+- tlmgr update --all
+- tlmgr install etoolbox tcolorbox framed polyglossia hyperref pgf xcolor
+- xelatex latex_template.tex
+- xelatex latex_template.tex
 deploy:
   provider: releases
   api_key:
-    secure: S5d4sdbd8BPbkQ12HSwGYedNxRnuC20ZL1qIE71LYw2sr7sO8oz7uR4kIhpkOFKDRIZQDpyxaBb5XH/wz+0PneJmvS9cVGAcPebalbBHW8iTs1BTeNgfUSmZPcOxW98OvyDSstwyvxk/7K0h04PWqwIYumfxUXb5VEgYl1gV1FNXcRcWp33aI/L3siI8/zAQ2RwDtACgRz9IbORB6L2MSdTNjUOWXSMsX4SnmAz4ZGmzhkc+k/CKHeD2O7hznHqRB0PLH/eXIiA/ZIZLOLBVPk9ouMO9dMF1KE0GpY/gCpHki5Ci2Cjm17RAXKCAHB4dEAV52VW6lUu5KkcHsLi8Bu2hrMuSmWhnp9cJPsb+k/0npREq7i644b5UwkCtgyufshyDLZUg6LL8NmCHm0z8gpnSJX0HCazzcdNp+9m8rY4nuPfPWR1HQGhtZKhzXGevDTsLFRvD2EmnOrRIN0ty33HzSL2q1kW8A1lUyz4A3LLAl3bV6a3IgLn/AzC4CAoedxbZAkgbVA6xCmoVrliBaA+Gi6bPsWJMZA/Qyb0c9tla4UemhxArr8OsZ0JSf+ONKyMNGN1VviPIToTfBUAoz81fs2JhO4NohQkR6eHugd/R4UeXx4V4YAkow6TROLpuAE+x1Lk9oWRE/xmo5lrQA3PUiSpAeKoajfTLM2+O5kE=
+    secure: gFOjUsRnG1/Lfqyk4BSn4Nf2JtY9Au2ygLH7yWwdR2P8j6sG3B3/MeCFXpHJaCC4TeGMEXxlh8wzheynFN9cE8XWXW2M32IBJz/WxdjmKDpdrcQifq3ZmE/Rlv7k5BdwhEFaDusHvT6adpMQufOp4Xn4kwRPPWeRnZT1XO5+tPOqEJ1L3z+65jzWjbOA+WTRIEqJMU34OXOnCXJLTzqWA3RjIQlPcz6NeHV/iAh1D5dpBRnhLJyhInzUhg7ug7fmfdBwU7M6G8+up2PG4rURjOJy035pO5RnYDDxfDHnmDy7sUmGZK4ZNtZmINiMTqnHkE6k+T2TtRy5xk21FYUJxYnTxn5eL8Fj7MzQfeMkSvgh3OmEeP53zemcGXNR96CC1S/7IuzYrWFEgsEORD4ydlyYMHORzop4nSe3Ae6BfRw6yZXRe0iwoFih3Q8vVC4hSewCO9woF7K/cSGzaKfRwEA1nNZLxIp7u1I7LIa5djv2vCkQWX9DkicNaXhFBLMSBYTquSTaLSpI79BqP5r+LQqod+n78yl28Z9n6/h2jOwD1UTu4w3+55uiqAeGTjDITWik3F7C6t6Ynaz1paVW2zSlds0QoMNjloAkxt0iffcn3laYg6caVzHDMD3GWlbbo53eaeBb9FAL/4IprKGrWZRHiB/I/FHmQyUBgn/uh80=
   file: latex_template.pdf
-  skip-cleanup: true
-  overwrite: true
   on:
     repo: bme-vik/latex_template
