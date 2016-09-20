@@ -24,4 +24,4 @@ deploy:
   skip-cleanup: true
   overwrite: true
   on:
-    repo: bme-vik/latex_template
+    repo: bme-notes/latex_template
