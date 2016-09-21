@@ -1,1 +1,1 @@
-# latex_template
+# [TARGYNEV jegyzet](https://bme-notes.github.io/#REPONAME)
