@@ -2,7 +2,8 @@
 *.log
 *.aux
 *.toc
-*.pdf
+/*.pdf
 *.out
 *~
 \#*\#
+dockercmd.sh
